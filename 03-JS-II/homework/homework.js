@@ -154,32 +154,33 @@ function operadoresLogicos(num1, num2, num3) {
 
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
 
-  
-  /*
-  if(num1 > num2,num3 && num1 >= 1)return "Numero 1 es mayor y positivo";
-  if(num1 <= -1 || num2 <= -1 || num3 <=-1) return "Hay negativos";
-  if(num3 <num1,num2) return ++num3 ;
-  if(num1,num2,num3 === 0)return "Error";
-  else return "False"
-  */
-
-  //num1 >= 1
+ /*
   if (num1 > num2 && num1 > num3 && num1 >=1){
     return "Numero 1 es mayor y positivo"
-  }if(num1 <= -1 || num2 <= -1 || num3 <=-1){
+  }else if(num1 <= -1 || num2 <= -1 || num3 <=-1){
     return "Hay negativos"
-  }if(num3 > num1 && num3 > num2 && num3){
+  }else if(num3 > num1 && num3 > num2 && num3){
     return ++num3
-  }if(num1 === 0 || num2 ===0 ||num3 ===0 ){
+  }else if(num1 === 0 || num2 ===0 ||num3 ===0 ){
     return "Error"
   }else{ 
     return "False"
-}
+  }
+ */
+
+  if (num1 === 0 || num2 === 0 ||num3 === 0) return "ERROR";
+  if (num1 <= -1 || num2 <= -1 || num3 <=-1) return "Hay negativos"
+  if (num1 > num2 && num1 > num3 && num1 >0) return "Numero 1 es mayor y positivo";
+  if (num3 > num1 && num3 > num2 && num3) return ++num3;
+  else return "FALSO";
+    
+ 
 }
 console.log(operadoresLogicos(10, 2, 4))
 console.log(operadoresLogicos(2, -2, 7))
 console.log(operadoresLogicos(2, 2, 7))
-console.log(operadoresLogicos(0, 0, 2))
+console.log(operadoresLogicos(0, 3, 9))
+console.log(operadoresLogicos(2,3))
 
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
@@ -187,6 +188,8 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+
+  
 }
 
 function esVerdadero(valor){
